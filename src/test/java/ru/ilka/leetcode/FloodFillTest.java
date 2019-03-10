@@ -52,8 +52,8 @@ public class FloodFillTest {
     public void testAllCasesOfFloodFill() throws IOException {
         int[] actualResult = solution.findMaxIsland(FileReader.readMatrixFromFile(testDataPath));
         int[] expectedResult = FileReader.readAnswerFromFile(testAnswerPath);
-        assertEquals(actualResult[0], expectedResult[0]);
-        assertEquals(actualResult[1], expectedResult[1]);
+        assertEquals(expectedResult[0], actualResult[0]);
+        assertEquals(expectedResult[1], actualResult[1]);
     }
 
     /*
@@ -65,5 +65,6 @@ public class FloodFillTest {
                 {1, 2, 2, 3},
                 {3, 1, 1, 1}});
         logger.debug(answer[0] + ": " + answer[1]);
-    }*/
+    }
+    */
 }
