@@ -1,12 +1,9 @@
-package ru.ilka.leetcode;
+package ru.ilka.leetcode.solution;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import ru.ilka.leetcode.solution.Solution;
 import ru.ilka.leetcode.util.FileReader;
 
 import java.io.IOException;
@@ -17,7 +14,6 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class FloodFillTest {
-    private static final Logger logger = LogManager.getLogger(FloodFillTest.class);
     private Solution solution;
 
     private String testDataPath;
@@ -55,16 +51,4 @@ public class FloodFillTest {
         assertEquals(expectedResult[0], actualResult[0]);
         assertEquals(expectedResult[1], actualResult[1]);
     }
-
-    /*
-    @Test
-    public void solutionTestOnDefaultMatrix() {
-        int[] answer = solution.findMaxIsland(new int[][]{
-                {1, 2, 2, 3},
-                {1, 1, 2, 3},
-                {1, 2, 2, 3},
-                {3, 1, 1, 1}});
-        logger.debug(answer[0] + ": " + answer[1]);
-    }
-    */
 }
